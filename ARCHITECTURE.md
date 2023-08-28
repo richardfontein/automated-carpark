@@ -1,6 +1,6 @@
 # Architecture
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](/docs/architecture.png)
 
 1. User Browsing Website, HTTP content request is sent to Route53 hosted zone. Available methods:
    - GET
