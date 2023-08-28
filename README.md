@@ -5,13 +5,13 @@ A demonstration of an automated carpark web application for parkers to manage th
 Supported Features:
 - [x] Multi-tenanted license plate management
 - [x] Stripe API billing & subscription management
-- [x] SmartParking API integration for license plate syncrhonisation
+- [x] SmartParking API integration for license plate synchronisation
 - [x] Administrative panel
 
 ## Repo structure
 
 * `/client` - React.js frontend
-* `/server` - Expres.js backend
+* `/server` - Express.js backend
 
 ## Architecture
 
@@ -39,7 +39,7 @@ See [architecture.md](/ARCHITECTURE.md).
 ## Improvements
 * Add TypeScript support
 * Add unit (Jest) & E2E (Cypress) tests
-* Better use of dependency inversion
+* Better use of dependency inversion in server
 
 ## Credits
 
