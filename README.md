@@ -43,4 +43,4 @@ See [architecture.md](/ARCHITECTURE.md).
 
 ## Credits
 
-**NB: Excerpted from a 2018 Project for [innovationcarpark.co.nz](https://innovationcarpark.co.nz)**
+**NB: Excerpted and adapted from a 2018 Project for [innovationcarpark.co.nz](https://innovationcarpark.co.nz)**
