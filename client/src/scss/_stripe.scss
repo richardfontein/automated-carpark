@@ -1,0 +1,18 @@
+.modal-body {
+  .form-label {
+    color: $gray-dark;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .form-control {
+    font-family: sans-serif;
+  }
+}
+
+.form-control {
+  &.StripeElement {
+    padding-top: 0.9375rem;
+    padding-bottom: 0;
+  }
+}

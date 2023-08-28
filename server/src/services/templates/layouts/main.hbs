@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <title>{{title}}</title>
+
+  <style type="text/css">
+    body {
+      background-color: #f0f1f3;
+      margin: 1rem;
+      font-size: 16px;
+    }
+
+    a .btn {
+      background-color: #4253ff;
+      border-color: #4253ff;
+    }
+
+    .header svg {
+      width: 200px;
+    }
+
+    .main {
+      background-color: #fff;
+      max-width: 600px;
+      box-shadow: 0 0 15px #e8eaec;
+      -webkit-box-shadow: 0 0 15px #e8eaec;
+    }
+
+    .main p {
+      color: #666
+    }
+
+    .main-border-top {
+      border-top: #313131 solid 4px;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .footer a {
+      color: #666;
+    }
+
+    .footer address {
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container text-center">
+    <div class="header my-4">
+      {{{logo}}}
+    </div>
+    <div class="main border rounded mx-auto">
+      <div class="main-border-top"></div>
+      {{{body}}}
+    </div>
+    <div class="footer mt-4">
+      <div>
+        <a href="{{baseUrl}}/support" target="_blank" rel="noopener noreferrer">Support</a>
+        |
+        <a href="{{baseUrl}}/dashboard/login" target="_blank" rel="noopener noreferrer">Log In</a>
+      </div>
+      <div class="mt-4" style="font-size:12px;">
+        <address>
+          Automated Carpark Ltd. 160 Lichfield St, Christchurch 8011, New
+          Zealand
+        </address>
+      </div>
+    </div>
+</body>
+
+</html>

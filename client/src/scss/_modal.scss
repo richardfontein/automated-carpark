@@ -1,0 +1,15 @@
+.modal-header {
+  align-items: center;
+  border-bottom: 1px solid $gray-light;
+}
+
+.modal-body {
+  background-color: $smoke-light;
+}
+
+.modal-footer {
+  justify-content: center;
+  padding-top: 0;
+  background-color: $smoke-light;
+  border: 0;
+}

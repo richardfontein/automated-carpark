@@ -1,0 +1,39 @@
+<div class="px-4">
+  <div class="pt-5" style="font-size: 20px;">
+    <p>A message has been received from {{name}}</p>
+  </div>
+  <div class="mt-4 text-left">
+    <strong>Subject: </strong>{{subject}}<br>
+    <br>
+    <p style="color:#313131">
+      {{{message}}}
+    </p>
+  </div>
+  {{#if tenancies}}
+  <div class="py-2">
+    <div style="font-size: 20px;">
+      <p>The user has the following active carparks:</p>
+    </div>
+    <table class="table table-borderless text-left" style="color:#313131">
+      <thead style="border-bottom: 1px solid #ddd">
+        <tr>
+          <th scope="col">Vehicle</th>
+          <th scope="col">Plates</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each tenancies}}
+        <tr style="color:#666; border-bottom: 1px solid #ddd;">
+          <td>{{this.vehicleType}}</td>
+          <td>{{this.plates}}</td>
+          <td>{{this.startDate}}</td>
+          <td>{{this.endDate}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{/if}}
+</div>

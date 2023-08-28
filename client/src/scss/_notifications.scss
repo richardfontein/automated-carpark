@@ -1,0 +1,52 @@
+.notification-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: display 0.15s linear;
+
+  .notification {
+    max-width: inherit;
+    font-size: 1rem;
+    z-index: 100000;
+    width: auto;
+
+    margin: 0.5rem;
+
+    .alert {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-width: 500px;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.alert-notification-primary {
+  @include alert-variant(
+    $background: $blue,
+    $border: rgba(0, 0, 0, 0),
+    $color: $white
+  );
+}
+
+.alert-notification-success {
+  @include alert-variant(
+    $background: $green,
+    $border: rgba(0, 0, 0, 0),
+    $color: $white
+  );
+}
+
+.alert-notification-danger {
+  @include alert-variant(
+    $background: $red,
+    $border: rgba(0, 0, 0, 0),
+    $color: $white
+  );
+}

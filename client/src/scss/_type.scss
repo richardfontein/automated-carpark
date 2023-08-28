@@ -1,0 +1,17 @@
+.all-caps-small {
+  color: $gray-dark;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.heading-jumbo {
+  font-size: 3rem;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 2rem;
+  }
+}
+
+.no-data {
+  font-size: 0.875rem;
+}

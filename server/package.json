@@ -1,0 +1,46 @@
+{
+  "name": "icl-backend",
+  "version": "1.0.0",
+  "description": "Automated Carpark Server",
+  "main": "server.js",
+  "author": "Richard Fontein",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "yarn babel src -s -d build --copy-files",
+    "build": "yarn clean && yarn build-server",
+    "server": "nodemon --exec babel-node src/server.js"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "aws-sdk": "^2.532.0",
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^2.2.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "node-schedule-tz": "^1.2.1-4",
+    "nodemailer": "^6.3.0",
+    "nodemailer-express-handlebars": "^3.1.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.9.2",
+    "stripe": "^7.5.0",
+    "winston": "^3.2.1",
+    "winston-transport": "^4.3.0",
+    "xero-node": "^3.1.1",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "eslint": "5.3.0",
+    "eslint-config-airbnb-base": "13.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "nodemon": "^1.19.1"
+  }
+}

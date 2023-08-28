@@ -1,0 +1,59 @@
+/* Start Sticky Footer Settings */
+html,
+body,
+#main {
+  height: 100%;
+}
+.main-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page-footer .page-header .navbar {
+  flex-shrink: 0;
+}
+.page-body {
+  flex-grow: 1;
+}
+/* End Sticky Footer Settings */
+
+.page-footer {
+  padding: 1.5rem 1.25rem;
+  border-top: 1px $gray-light solid;
+
+  @include media-breakpoint-down(md) {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .footer-content {
+    font-size: 0.75rem;
+    color: $gray-dark;
+    text-align: center;
+
+    .footer-links {
+      margin-bottom: 0.5rem;
+      a {
+        text-decoration: none;
+        &:hover {
+          border-bottom: 1px solid $blue;
+        }
+      }
+      :not(:first-child) {
+        margin-left: 1rem;
+      }
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+        text-align: left;
+      }
+    }
+
+    .copyright {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

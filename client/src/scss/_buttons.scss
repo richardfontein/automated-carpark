@@ -1,0 +1,150 @@
+/* Adjust background colour to less darker on hover */
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant(
+      $value,
+      $value,
+      $hover-background: darken($value, 5%),
+      $hover-border: darken($value, 5%),
+      $active-background: darken($value, 5%),
+      $active-border: darken($value, 5%)
+    );
+  }
+}
+
+/* Manually adjust background colour to of secondary button to darker on hover */
+.btn-secondary {
+  @include button-variant(
+    $background: $secondary,
+    $border: $secondary,
+    $hover-background: darken($secondary, 10%),
+    $hover-border: darken($secondary, 10%),
+    $active-background: darken($secondary, 10%),
+    $active-border: darken($secondary, 10%)
+  );
+}
+
+/* Add "indent" style to button when pressed */
+.btn:active:focus {
+  box-shadow: inset 0 5px 7px -2px rgba(31, 31, 31, 0.15) !important;
+}
+
+.btn-jumbo {
+  @include button-variant($background: $blue, $border: $blue);
+  font-size: 1rem;
+  padding: 1rem 1.125rem;
+  line-height: 1;
+
+  .svg-inline--fa {
+    font-size: 0.75rem;
+  }
+}
+
+.btn-outline-jumbo {
+  @include button-outline-variant($color: $blue, $color-hover: $white);
+  font-size: 1em;
+  padding: 1rem 1.125rem;
+  line-height: 1;
+
+  .svg-inline--fa {
+    font-size: 0.75rem;
+  }
+}
+
+.btn-hero {
+  @include button-variant($background: $blue, $border: $blue);
+  padding: 0.75rem 1.875rem;
+  font-size: 0.75rem;
+  border-radius: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-hero-transparent {
+  @include button-variant(
+    $background: transparent,
+    $border: transparent,
+    $hover-background: $gray-800,
+    $hover-border: $gray-800,
+    $active-background: $gray-800,
+    $active-border: $gray-800
+  );
+
+  padding: 0.75rem 1.875rem;
+  font-size: 0.75rem;
+  border-radius: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn-outline-hero {
+  @include button-outline-variant($color: $blue, $color-hover: $white);
+  padding: 0.75rem 1.875rem;
+  font-size: 0.75rem;
+  border-radius: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-outline-hero-light {
+  @include button-outline-variant(
+    $color: $white,
+    $color-hover: $black,
+    $active-background: $white,
+    $active-border: $white
+  );
+  padding: 0.75rem 1.875rem;
+  font-size: 0.75rem;
+  border-radius: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Add margin bottom to button-list */
+.button-list {
+  margin-bottom: 1.25rem;
+  :not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  .button-description {
+    :nth-child(n) {
+      margin-right: 0;
+    }
+  }
+}
+
+/* Select Button List */
+.select-button-list-wrapper {
+  margin-top: 1rem;
+  @include media-breakpoint-up(lg) {
+    margin-top: 0rem;
+  }
+
+  :not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  // Vertically center content
+  &,
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .description {
+    color: $gray-dark;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.25rem 0.75rem;
+    margin-top: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0rem;
+    }
+  }
+}

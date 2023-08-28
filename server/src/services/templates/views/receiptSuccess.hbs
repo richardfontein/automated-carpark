@@ -1,0 +1,49 @@
+<div class="px-4">
+  <div class="pt-5">
+    <h1>${{formattedTotal}} Paid</h1>
+  </div>
+  <div class="pt-4" style="font-size: 24px;">
+    <p>Thank you for parking with us!</p>
+  </div>
+  <div class="mt-5 text-left">
+    <p>
+      {{name}}<br>
+      Date: {{formattedDate}}<br>
+      Invoice ID: <a href="{{baseUrl}}/dashboard/account/billing" target="_blank"
+        rel="noopener noreferrer">{{stripeInvoiceId}}</a><br>
+      <a href="{{stripeInvoiceUrl}}" target="_blank" rel="noopener noreferrer">Download as PDF</a>
+    </p>
+  </div>
+  <div>
+    <table class="table table-borderless" style="color:#313131">
+      <thead style="border-bottom: 1px solid #ddd">
+        <tr>
+          <th scope="col" class="text-left">Item</th>
+          <th scope="col" class="text-right">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each formattedInvoiceItems}}
+        <tr style="color:#666; border-bottom: 1px solid #ddd;">
+          <td class="text-left">{{this.description}}</td>
+          <td class="text-right">${{this.amount}}</td>
+        </tr>
+        {{/each}}
+        <tr style="border-bottom: 2px solid #313131">
+          <td></td>
+          <td class="text-right">Subtotal:&emsp;${{formattedSubtotal}}</td>
+        </tr>
+        <tr style="border-bottom: 2px solid #313131">
+          <td></td>
+          <td class="text-right">Paid:&emsp;${{formattedTotal}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="text-left mt-5">
+    <p>
+      Thank you,<br>
+      Automated Carpark
+    </p>
+  </div>
+</div>

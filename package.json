@@ -1,0 +1,26 @@
+{
+  "name": "automated-carpark",
+  "version": "1.0.0",
+  "description": "Automated Carpark Web Application.",
+  "main": "server/server.js",
+  "repository": "https://github.com/richardfontein/automated-carpark.git",
+  "author": "Richard Fontein <richard@fontein.co>",
+  "license": "MIT",
+  "scripts": {
+    "build-client": "cd client && yarn build",
+    "build-server": "cd server && yarn build",
+    "build": "yarn build-server && yarn build-client",
+    "install-dev": "yarn install && cd server && yarn install && cd ../client && yarn install",
+    "install-production": "yarn install --production --force && cd server && yarn install --production --force && cd ../client && yarn install --production --force",
+    "start": "cd server && node ./build/server.js",
+    "demo": "PORT=8080 NODE_ENV=production yarn start",
+    "server": "cd server && yarn server",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "deploy-dev": "eb deploy automated-carpark-dev",
+    "deploy-production": "eb deploy automated-carpark"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1"
+  }
+}

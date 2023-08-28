@@ -1,0 +1,48 @@
+<div class="px-4">
+  <style>
+    .main-border-top {
+      border-top: #e20000 solid 4px;
+    }
+  </style>
+  <div class="pt-5">
+    <h1>${{formattedTotal}} Due</h1>
+  </div>
+  <div class="pt-4">
+    <p style="font-size: 24px;">Your carpark is on hold due to payment failure.</p><br>
+    Please update your payment details to continue using the carpark.<br>
+    You may do so through <a href="{{baseUrl}}/dashboard/account/billing" target="_blank" rel="noopener noreferrer">our
+      website</a>.</p>
+  </div>
+  <div>
+    <table class="table table-borderless" style="color:#313131">
+      <thead style="border-bottom: 1px solid #ddd">
+        <tr>
+          <th scope="col" class="text-left">Item</th>
+          <th scope="col" class="text-right">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each formattedInvoiceItems}}
+        <tr style="color:#666; border-bottom: 1px solid #ddd;">
+          <td class="text-left">{{this.description}}</td>
+          <td class="text-right">${{this.amount}}</td>
+        </tr>
+        {{/each}}
+        <tr style="border-bottom: 2px solid #313131">
+          <td></td>
+          <td class="text-right">Subtotal:&emsp;${{formattedSubtotal}}</td>
+        </tr>
+        <tr style="border-bottom: 2px solid #313131">
+          <td></td>
+          <td class="text-right">Due:&emsp;${{formattedTotal}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="text-left mt-5">
+    <p>
+      Thank you,<br>
+      Automated Carpark
+    </p>
+  </div>
+</div>

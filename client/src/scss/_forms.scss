@@ -1,0 +1,130 @@
+.form-wrapper {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+
+  .terms {
+    font-size: 0.875rem;
+    color: $gray-dark;
+    a {
+      color: $gray-dark;
+      text-decoration: none;
+      border-bottom: 1px solid opacify($gray-dark, 0.2);
+      &:hover {
+        color: $black-light;
+        border-bottom: 1px solid opacify($black-light, 0.4);
+      }
+    }
+  }
+}
+
+.form-control {
+  box-shadow: inset 0px 0px 0px 1px rgba(31, 31, 31, 0.21),
+    inset 0 5px 3px -2px rgba(31, 31, 31, 0.04);
+
+  // Darken box shadow on hover
+  &:hover {
+    box-shadow: inset 0px 0px 0px 1px rgba(31, 31, 31, 0.35),
+      inset 0 5px 3px -2px rgba(31, 31, 31, 0.06);
+  }
+
+  &:focus,
+  &.StripeElement--focus {
+    box-shadow: inset 0px 0px 0px 1px $blue,
+      inset 0 5px 3px -2px rgba(31, 31, 31, 0.05);
+  }
+
+  &:invalid,
+  &.is-invalid,
+  &.StripeElement--invalid {
+    box-shadow: inset 0px 0px 0px 1px $red,
+      inset 0 5px 3px -2px rgba(31, 31, 31, 0.05);
+
+    &:focus {
+      box-shadow: inset 0px 0px 0px 1px $red,
+        inset 0 5px 3px -2px rgba(31, 31, 31, 0.05);
+    }
+  }
+}
+
+/* Field Array button - to add or remove fields */
+.btn-field-array {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  font-size: 0.75rem;
+  color: $blue;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Indent text to match fields on select */
+select.form-control {
+  position: relative;
+  max-width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  /* Inline arrow down svg */
+  &:not(:disabled):not(readonly) {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhbCIgZGF0YS1pY29uPSJhbmdsZS1kb3duIiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI1NiA1MTIiIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1hbmdsZS1kb3duIGZhLXctOCBmYS0zeCI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTE5LjUgMzI2LjlMMy41IDIwOS4xYy00LjctNC43LTQuNy0xMi4zIDAtMTdsNy4xLTcuMWM0LjctNC43IDEyLjMtNC43IDE3IDBMMTI4IDI4Ny4zbDEwMC40LTEwMi4yYzQuNy00LjcgMTIuMy00LjcgMTcgMGw3LjEgNy4xYzQuNyA0LjcgNC43IDEyLjMgMCAxN0wxMzYuNSAzMjdjLTQuNyA0LjYtMTIuMyA0LjYtMTctLjF6IiBjbGFzcz0iIj48L3BhdGg+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1rem;
+    background-position: right center;
+    background-clip: border-box;
+    -moz-background-clip: border-box;
+    -webkit-background-clip: border-box;
+  }
+}
+
+/**************************/
+/*** Datepicker Styling ***/
+/**************************/
+
+/* Invalid datepicker overide to show error message */
+.invalid-feedback.invalid-datepicker {
+  display: block;
+}
+
+/* Styling for last child picker */
+.react-datepicker-popper[data-placement^='top-end']
+  .react-datepicker__triangle {
+  left: auto;
+  right: 50px;
+}
+
+/* Restyle hover colors */
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range {
+  background-color: $blue;
+
+  &:hover {
+    background-color: darken($blue, 5%);
+  }
+}
+
+/* Restyle Clear button icon */
+.react-datepicker__close-icon::after {
+  content: none;
+}
+.react-datepicker__close-icon {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhbCIgZGF0YS1pY29uPSJ0aW1lcyIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtdGltZXMgZmEtdy0xMCBmYS0zeCI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTkzLjk0IDI1NkwyOTYuNSAxNTMuNDRsMjEuMTUtMjEuMTVjMy4xMi0zLjEyIDMuMTItOC4xOSAwLTExLjMxbC0yMi42My0yMi42M2MtMy4xMi0zLjEyLTguMTktMy4xMi0xMS4zMSAwTDE2MCAyMjIuMDYgMzYuMjkgOTguMzRjLTMuMTItMy4xMi04LjE5LTMuMTItMTEuMzEgMEwyLjM0IDEyMC45N2MtMy4xMiAzLjEyLTMuMTIgOC4xOSAwIDExLjMxTDEyNi4wNiAyNTYgMi4zNCAzNzkuNzFjLTMuMTIgMy4xMi0zLjEyIDguMTkgMCAxMS4zMWwyMi42MyAyMi42M2MzLjEyIDMuMTIgOC4xOSAzLjEyIDExLjMxIDBMMTYwIDI4OS45NCAyNjIuNTYgMzkyLjVsMjEuMTUgMjEuMTVjMy4xMiAzLjEyIDguMTkgMy4xMiAxMS4zMSAwbDIyLjYzLTIyLjYzYzMuMTItMy4xMiAzLjEyLTguMTkgMC0xMS4zMUwxOTMuOTQgMjU2eiIgY2xhc3M9IiI+PC9wYXRoPjwvc3ZnPg==');
+  background-repeat: no-repeat;
+}
+
+/* Restyle readonly form control for datepicker, for mobile */
+.form-control[readonly]:not(:disabled) {
+  background-color: $white;
+}
